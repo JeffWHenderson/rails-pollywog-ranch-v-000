@@ -3,8 +3,7 @@ class Tadpole < ActiveRecord::Base
   delegate :pond, :to => :frog, :allow_nil => true
 
   def metamorphose
-    puts "hello world"
-  #  Frog.new(self.name)
+   Frog.new
     #  puts self.color
     #  puts self.name
     # puts self.pond_id
