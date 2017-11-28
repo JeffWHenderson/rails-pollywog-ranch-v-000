@@ -5,7 +5,6 @@ class TadpolesController < ApplicationController
     @tadpole = Tadpole.find_by_id(params[:id])
     @frog = Frog.create(:name => @tadpole.name, :color => @tadpole.color, :pond => @tadpole.pond)
     @tadpole.destroy
-    raise @frog.inspect
     redirect_to("/frogs/#{new_frog_id}")
   end
 
