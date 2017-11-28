@@ -2,13 +2,9 @@ class TadpolesController < ApplicationController
   before_action :set_tadpole, only: [:show, :edit, :update, :destroy, :metamorphosize]
 
   def metamorphose
-   name = self.name
-   color = self.color
-   pond = Frog.find_by_id(self.frog_id).pond
-
-   Frog.create(name: name, color: color, pond: pond)
-   self.destroy
-   
+    @frog = Frog.create(:name => @tadpole.name, :color => @tadpole.color, :pond => @tadpole.pond)
+    @tadpole.destroy
+    redirect_to ("/frogs/#{@frog.id}")
   end
   
   def index
