@@ -6,7 +6,7 @@ class Tadpole < ActiveRecord::Base
    #Frog.new
    self.name
    self.color
-   self.frog_id
+   Frog.find_by_id(self.frog_id)
     #  puts self.color
     #  puts self.name
     # puts self.pond_id
