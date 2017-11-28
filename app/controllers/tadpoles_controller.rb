@@ -4,7 +4,7 @@ class TadpolesController < ApplicationController
   def metamorphose
     # @frog = Frog.create(:name => @tadpole.name, :color => @tadpole.color, :pond => @tadpole.pond)
     # @tadpole.destroy
-    # redirect_to ("/frogs/#{@frog.id}")
+     redirect_to ("/frogs/#{@frog.id}")
   end
 
   def index
