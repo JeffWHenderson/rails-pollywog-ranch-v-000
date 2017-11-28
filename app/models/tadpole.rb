@@ -4,7 +4,7 @@ class Tadpole < ActiveRecord::Base
 
   def metamorphose
    #Frog.new
-   self
+   self.name
     #  puts self.color
     #  puts self.name
     # puts self.pond_id
