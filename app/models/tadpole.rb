@@ -7,6 +7,6 @@ class Tadpole < ActiveRecord::Base
    color = self.color
    pond = Frog.find_by_id(self.frog_id).pond
 
-   Frog.new(name: name, color: color, pond: pond)
+   Frog.create(name: name, color: color, pond: pond)
   end
 end
