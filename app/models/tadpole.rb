@@ -6,6 +6,7 @@ class Tadpole < ActiveRecord::Base
    #Frog.new
    self.name
    self.color
+   self.pond_id
     #  puts self.color
     #  puts self.name
     # puts self.pond_id
